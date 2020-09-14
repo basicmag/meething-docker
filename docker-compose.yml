@@ -6,6 +6,7 @@ services:
     container_name: meething
     volumes:
       - ./meething-all.config.js:/meething-all.config.js
+      - ./certs:/certs
     environment:
       - SSLCERT=/certs/fullchain.pem
       - SSLKEY=/certs/privkey.pem
@@ -15,4 +16,4 @@ services:
       - 2345:2345
       - 8765:8765
     labels:
-      org.label-schema.group: "meething"
+      org.label-schema.group: 'meething'
